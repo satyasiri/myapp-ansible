@@ -1,0 +1,8 @@
+---
+- hosts: webservers 
+  become: True
+  tasks:
+    - name: Creates directory
+      file:
+        path: /tmp/ansible
+        state: directory
